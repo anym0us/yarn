@@ -203,6 +203,7 @@ export default class Audit {
       json: true,
     });
     this.reporter.verbose(`Audit Response: ${JSON.stringify(response, null, 2)}`);
+    console.log(JSON.stringify(response, null, 2));
     if (!response || !response.metadata) {
       throw new Error(`Unexpected audit response: ${response}`);
     }
